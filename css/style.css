@@ -1,0 +1,507 @@
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: all;
+}
+
+html {
+    scroll-behaviour: smooth;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+
+/*-------------------------------------------------
+  the beginning of navbar design..       
+ --------------------------------------------------*/
+
+#navbar {
+    background-color: skyblue;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 3;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+#navbar ul a {
+    display: block;
+    padding: 20px;
+    border-right: 1px solid yellow;
+    text-decoration: none;
+}
+
+#navbar ul a:hover {
+    background-color: #ddd;
+}
+
+#navbar .navlink {
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+#navbar .button {
+    width: 80px;
+    padding: 28px 20px;
+    position: relative;
+}
+
+#navbar .button .bar {
+    width: 30px;
+    display: block;
+    height: 4px;
+    background-color: #ffffff;
+    position: relative;
+    cursor: pointer;
+    transition: background .2s ease-out;
+}
+
+#navbar .button .bar::before {
+    background-color: #ffffff;
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 10px;
+}
+
+#navbar .button .bar::after {
+    background-color: #ffffff;
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -10px;
+}
+
+#navbar .menu-btn {
+    display: none;
+}
+
+#navbar .menu-btn:checked~.navlink {
+    max-height: 500px;
+}
+
+#navbar .menu-btn:checked~.button .bar {
+    background: transparent;
+}
+
+#navbar .menu-btn:checked~.button .bar:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#navbar .menu-btn:checked~.button .bar:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media screen and (min-width: 720px) {
+    #navbar {
+        background-color: skyblue;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #navbar ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: skyblue;
+    }
+    #navbar li {
+        width: 25%;
+        float: left;
+    }
+    #navbar ul a {
+        display: block;
+        padding: 10px;
+        font-size: 40px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+    }
+    #navbar ul a:hover {
+        color: #ffffff;
+        background-color: skyblue;
+    }
+    #navbar .navlink {
+        max-height: none;
+    }
+    #navbar .button {
+        display: none;
+    }
+}
+
+
+/* the beginning of navbar - menu design.....*/
+
+
+/* the end of navbar - menu design.....*/
+
+
+/*-------------------------------------------------
+  the beginning of carousel design..       
+ --------------------------------------------------*/
+
+.bs-example {
+    margin-top: -10px;
+}
+
+.carousel {
+    background-color: skyblue;
+}
+
+.carousel .item {
+    min-height: 200px;
+    /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+
+.carousel .item img {
+    margin: 0 auto;
+    /* Align slide image horizontally center */
+}
+
+
+/*-------------------------------------------------
+  the end of carousel design..       
+ --------------------------------------------------*/
+
+.link-line {
+    background-color: skyblue;
+    position: static;
+    margin: auto;
+    padding: 5%;
+    text-align: center;
+}
+
+.link-item {
+    display: inline;
+    margin: 3%;
+    list-style: none;
+}
+
+.link-item a {
+    text-decoration: none;
+    width: 10%;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.link-item a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+//the end of links design//
+#present-frame {
+    margin: auto;
+}
+
+#present-frame .present {
+    padding: 5%;
+    text-align: center;
+}
+
+#present-frame .present h1 {
+    text-align: center;
+    color: white;
+}
+
+#begin {
+    width: 100%;
+    background-color: skyblue;
+    padding: 2%;
+}
+
+
+/* section design */
+
+#section {
+    margin: auto;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: white;
+}
+
+
+/* the end of section design */
+
+
+/* portfolio design */
+
+#section .profolio {
+    padding: 2%;
+    margin: auto;
+    width: 90%;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#section .profolio .row {
+    margin: auto;
+}
+
+#section .profolio .row .col-ms-6 .photo {
+    text-align: center;
+}
+
+#section .profolio .row .col-ms-6 .photo .pro-button {
+    text-align: center;
+    margin: auto;
+}
+
+#section .profolio .row .col-ms-6 .photo .pro-button a .probut {
+    border: 1px solid skyblue;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: skyblue;
+    padding: 3%;
+    width: 100%;
+    color: white;
+}
+
+#section .profolio .row .col-ms-6 .photo .pro-button a .probut:hover {
+    border: 3px inset skyblue;
+}
+
+#section .profolio .row .col-ms-6 .info {
+    margin: 0;
+    padding: 0;
+}
+
+#section .profolio .row .col-ms-6 .info ul {
+    list-style-type: none;
+}
+
+#section .profolio .row .col-ms-6 .info ul li {
+    text-align: center;
+}
+
+#section .profolio .row .col-ms-6 .info ul li a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: skyblue;
+    font-size: 20px;
+}
+
+#section .profolio .row .col-ms-6 .info ul li a:hover {
+    color: ;
+    padding-left: 2%;
+}
+
+#section .profolio .row .col-ms-6 .skills {
+    width: 100%;
+}
+
+#section .profolio .row .col-ms-6 .skills ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+#section .profolio .row .col-ms-6 .skills ul li .skills-box {
+    background-color: skyblue;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 50px;
+    margin: 2%;
+}
+
+#section .profolio .row .col-ms-6 .skills ul li .skills-box .skills-logo {
+    margin: 2%;
+    float: left;
+    width: 20%;
+}
+
+#section .profolio .row .col-ms-6 .skills ul li .skills-box .skills-logo img {
+    border-radius: 50%;
+}
+
+#section .profolio .row .col-ms-6 .skills ul li .skills-box .skills-bar {
+    margin-top: 3%;
+    padding: 0;
+    float: Left;
+    width: 70%;
+}
+
+#section .profolio .row .col-ms-6 .skills ul li .skills-box .skills-bar label {
+    font-size: 18px;
+}
+
+#section .profolio .row .col-ms-6 .skills ul li .skills-box .skills-bar .bar {
+    height: 18px;
+    border: none;
+    outline: none;
+}
+
+
+/* the end of portfolio design*/
+
+
+/* certificate designb*/
+
+#section .certificate {
+    padding: 2%;
+    margin: auto;
+    width: 90%;
+}
+
+#section .certificate .row {
+    margin: auto;
+}
+
+#section .certificate .row .col-md-4 {
+    margin: auto;
+}
+
+#section .certificate .certi-inner-box {
+    margin-bottom: 3%;
+}
+
+#section .certificate .certi-inner-box .certi-block {
+    background-color: skyblue;
+    border-radius: 25px;
+    padding: 10%;
+}
+
+#section .certificate .certi-inner-box .certi-block .certi {
+    margin: auto;
+    width: 90%;
+}
+
+#section .certificate .certi-inner-box .certi-block .certi-discribe {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+
+/* the end of certificate design */
+
+#section .about {
+    padding: 2%;
+    margin: auto;
+    width: 90%;
+}
+
+#section .description {
+    margin: auto;
+}
+
+#section .description p {}
+
+#section .comment {
+    padding: 2%;
+    margin: auto;
+    width: 90%;
+}
+
+#section .comment .comment-form {
+    margin: auto;
+}
+
+//section .comment .comment-form p{
+text-align: center;
+font-weight: bold;
+color: red;
+//}
+#section .comment .comment-form form .lab {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#section .comment .comment-form form .form-control {
+    border: 1px solid;
+    border-color: skyblue;
+}
+
+.line {
+    background-color: skyblue;
+    padding: 1%;
+    width: 30%;
+}
+
+#section .get-us {
+    padding: 2%;
+    margin: auto;
+    width: 90%;
+}
+
+#section .get-us .intouch {
+    margin: auto;
+    padding: auto;
+}
+
+#section .get-us .intouch .addresses {
+    margin: auto;
+    padding: auto;
+}
+
+#section .get-us .intouch .addresses ul {
+    list-style-type: none;
+    display: inline;
+}
+
+#section .get-us .intouch .addresses ul li {
+    padding: 3%;
+}
+
+#section .get-us .intouch .addresses ul li i {
+    color: skyblue;
+    width: 4%;
+}
+
+// platform design //
+#section .get-us .platform {
+    margin: auto;
+}
+
+#section .get-us .platform .line-circle {
+    margin: 2%;
+    display: inline-block;
+    border: 2px solid skyblue;
+    border-radius: 50%;
+    width: 20%;
+    padding: 3%;
+}
+
+#section .get-us .platform .line-circle a {
+    font-size: 30px;
+    text-align: center;
+}
+
+#section .get-us .platform .line-circle a i {
+    color: skyblue;
+}
+
+.footer {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.footer .producer {
+    padding: 2%;
+    text-align: center;
+    color: white;
+}
